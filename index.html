@@ -30,23 +30,120 @@
     "email": "peter@third.industries"
   }
   </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #F5F3EE; color: #2a2a2a; display: flex; align-items: center; justify-content: center; min-height: 100vh; padding: 2rem; }
-    .container { max-width: 480px; text-align: center; }
-    .mark { margin-bottom: 2rem; }
-    .mark img { max-width: 280px; width: 100%; height: auto; }
-    p { font-size: 1rem; line-height: 1.6; margin-bottom: 1.5rem; color: #555; }
-    a { color: #2a2a2a; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #0a0a0a;
+      color: #e4e4e8;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 3rem 2rem;
+    }
+
+    .page {
+      max-width: 480px;
+      width: 100%;
+    }
+
+    .mark {
+      margin-bottom: 3rem;
+      text-align: center;
+    }
+
+    .mark img {
+      max-width: 240px;
+      width: 100%;
+      height: auto;
+      filter: invert(1);
+    }
+
+    .rule {
+      border: none;
+      border-top: 1px solid #2a2a2f;
+      margin: 0 0 2rem 0;
+    }
+
+    .catalog {
+      list-style: none;
+      margin-bottom: 2.5rem;
+    }
+
+    .catalog li {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #63636e;
+      padding: 0.6rem 0;
+      border-bottom: 1px solid #1e1e22;
+    }
+
+    .catalog li:first-child {
+      border-top: 1px solid #1e1e22;
+    }
+
+    .footer-line {
+      font-size: 0.85rem;
+      color: #63636e;
+      margin-bottom: 0.75rem;
+    }
+
+    .footer-line a {
+      color: #b4b4be;
+      text-decoration: none;
+      border-bottom: 1px solid #3f3f46;
+    }
+
+    .footer-line a:hover {
+      color: #e4e4e8;
+      border-color: #e4e4e8;
+    }
+
+    .contact {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.75rem;
+      letter-spacing: 0.04em;
+    }
+
+    .contact a {
+      color: #63636e;
+      text-decoration: none;
+      border-bottom: 1px solid #2a2a2f;
+    }
+
+    .contact a:hover {
+      color: #b4b4be;
+      border-color: #b4b4be;
+    }
+
+    @media (max-width: 480px) {
+      body { padding: 2rem 1.5rem; }
+      .mark img { max-width: 200px; }
+    }
   </style>
 </head>
 <body>
-  <div class="container">
+  <div class="page">
     <div class="mark">
       <img src="Asset 2@2x.png" alt="Third Industries">
     </div>
-    <p>Products, services, and operations by <a href="https://petersalvato.com">Peter Salvato</a>.</p>
-    <p><a href="mailto:peter@third.industries">peter@third.industries</a></p>
+    <hr class="rule">
+    <ul class="catalog">
+      <li>Books</li>
+      <li>Prints</li>
+      <li>Music</li>
+      <li>Artifacts</li>
+    </ul>
+    <p class="footer-line">By <a href="https://petersalvato.com">Peter Salvato</a></p>
+    <p class="contact"><a href="mailto:peter@third.industries">peter@third.industries</a></p>
   </div>
 </body>
 </html>
