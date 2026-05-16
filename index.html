@@ -50,8 +50,8 @@
 
     body {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      background: #0a0a0a;
-      color: #e4e4e8;
+      background: #1c1a18;
+      color: #eae7e0;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
@@ -66,11 +66,11 @@
 
     .header {
       text-align: center;
-      margin-bottom: 3rem;
+      margin-bottom: 2.5rem;
     }
 
     .header img {
-      max-width: 200px;
+      max-width: 180px;
       width: 100%;
       height: auto;
       filter: invert(1);
@@ -79,59 +79,68 @@
     .cards {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 2px;
-      margin-bottom: 3rem;
+      gap: 1px;
+      background: #2d2a27;
+      margin-bottom: 2.5rem;
     }
 
     .card {
-      display: block;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       text-decoration: none;
       color: inherit;
-      background: #111;
-      overflow: hidden;
+      background: #1c1a18;
+      padding: 2.5rem 1.5rem;
       transition: background 0.15s ease;
     }
 
     .card:hover {
-      background: #1a1a1a;
+      background: #2d2a27;
     }
 
-    .card-image {
-      width: 100%;
-      aspect-ratio: 1200/630;
-      overflow: hidden;
+    .card-mark {
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.25rem;
     }
 
-    .card-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      filter: brightness(0.45) saturate(0.7);
-      transition: filter 0.15s ease;
-    }
-
-    .card:hover .card-image img {
-      filter: brightness(0.55) saturate(0.8);
-    }
-
-
-    .card-info {
-      padding: 1rem;
+    .card-mark img {
+      max-height: 64px;
+      max-width: 80px;
+      width: auto;
+      filter: invert(1);
     }
 
     .card-name {
       font-family: 'Calder Dark', monospace;
-      font-size: 0.95rem;
-      color: #e4e4e8;
-      margin-bottom: 0.25rem;
+      font-size: 1rem;
+      color: #eae7e0;
+      margin-bottom: 0.35rem;
+      text-align: center;
     }
 
     .card-desc {
       font-family: 'Calder Dark Grit', 'Calder Dark', monospace;
       font-size: 0.65rem;
-      letter-spacing: 0.08em;
+      letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: #63636e;
+      color: #6b6560;
+      text-align: center;
+    }
+
+    .card-url {
+      font-size: 0.6rem;
+      color: #44403a;
+      margin-top: 0.75rem;
+      letter-spacing: 0.02em;
+    }
+
+    .card:hover .card-url {
+      color: #6b6560;
     }
 
     .footer {
@@ -140,19 +149,19 @@
 
     .footer-line {
       font-size: 0.85rem;
-      color: #63636e;
+      color: #6b6560;
       margin-bottom: 0.5rem;
     }
 
     .footer-line a {
-      color: #b4b4be;
+      color: #b5aea6;
       text-decoration: none;
-      border-bottom: 1px solid #3f3f46;
+      border-bottom: 1px solid #44403a;
     }
 
     .footer-line a:hover {
-      color: #e4e4e8;
-      border-color: #e4e4e8;
+      color: #eae7e0;
+      border-color: #eae7e0;
     }
 
     .contact {
@@ -162,20 +171,21 @@
     }
 
     .contact a {
-      color: #63636e;
+      color: #6b6560;
       text-decoration: none;
-      border-bottom: 1px solid #2a2a2f;
+      border-bottom: 1px solid #44403a;
     }
 
     .contact a:hover {
-      color: #b4b4be;
-      border-color: #b4b4be;
+      color: #b5aea6;
+      border-color: #b5aea6;
     }
 
     @media (max-width: 600px) {
       body { padding: 2rem 1rem; }
-      .cards { grid-template-columns: 1fr; gap: 1px; }
-      .header img { max-width: 160px; }
+      .cards { grid-template-columns: 1fr; }
+      .header img { max-width: 140px; }
+      .card { padding: 2rem 1.5rem; }
     }
   </style>
 </head>
@@ -187,31 +197,28 @@
 
     <div class="cards">
       <a class="card" href="https://petersalvato.com">
-        <div class="card-image">
-          <img src="og-petersalvato.png" alt="Peter Salvato">
+        <div class="card-mark">
+          <img src="mark-ps.png" alt="Peter Salvato mark">
         </div>
-        <div class="card-info">
-          <div class="card-name">Peter Salvato</div>
-          <div class="card-desc">The practice</div>
-        </div>
+        <div class="card-name">Peter Salvato</div>
+        <div class="card-desc">The practice</div>
+        <div class="card-url">petersalvato.com</div>
       </a>
       <a class="card" href="https://joineryschool.com">
-        <div class="card-image">
-          <img src="og-joinery.png" alt="Joinery">
+        <div class="card-mark">
+          <img src="mark-joinery.svg" alt="Joinery mark">
         </div>
-        <div class="card-info">
-          <div class="card-name">Joinery</div>
-          <div class="card-desc">The school</div>
-        </div>
+        <div class="card-name">Joinery</div>
+        <div class="card-desc">The school</div>
+        <div class="card-url">joineryschool.com</div>
       </a>
       <a class="card" href="https://journeymanshow.com">
-        <div class="card-image">
-          <img src="og-journeyman.png" alt="Journeyman">
+        <div class="card-mark">
+          <img src="mark-journeyman.png" alt="Journeyman mark">
         </div>
-        <div class="card-info">
-          <div class="card-name">Journeyman</div>
-          <div class="card-desc">The show</div>
-        </div>
+        <div class="card-name">Journeyman</div>
+        <div class="card-desc">The show</div>
+        <div class="card-url">journeymanshow.com</div>
       </a>
     </div>
 
