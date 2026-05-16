@@ -66,7 +66,7 @@
 
     .header {
       text-align: center;
-      margin-bottom: 0;
+      margin-bottom: 2.5rem;
     }
 
     .header img {
@@ -74,63 +74,6 @@
       width: 100%;
       height: auto;
       filter: invert(1);
-    }
-
-    /* Tree connector */
-    .tree {
-      position: relative;
-      margin-bottom: 0;
-    }
-
-    .tree-trunk {
-      width: 1px;
-      height: 2rem;
-      background: #2a2a2f;
-      margin: 0 auto;
-    }
-
-    .tree-branches {
-      position: relative;
-      height: 1.5rem;
-      margin: 0 calc(100% / 6);
-    }
-
-    .tree-branches::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 1px;
-      background: #2a2a2f;
-    }
-
-    .tree-branches::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 50%;
-      width: 1px;
-      height: 0;
-    }
-
-    .tree-drops {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      margin: 0 calc(100% / 6);
-    }
-
-    .tree-drop {
-      display: flex;
-      justify-content: center;
-    }
-
-    .tree-drop::before {
-      content: '';
-      display: block;
-      width: 1px;
-      height: 1.5rem;
-      background: #2a2a2f;
     }
 
     .cards {
@@ -250,16 +193,6 @@
   <div class="page">
     <div class="header">
       <img src="Asset 2@2x.png" alt="Third Industries">
-    </div>
-
-    <div class="tree">
-      <div class="tree-trunk"></div>
-      <div class="tree-branches"></div>
-      <div class="tree-drops">
-        <div class="tree-drop"></div>
-        <div class="tree-drop"></div>
-        <div class="tree-drop"></div>
-      </div>
     </div>
 
     <div class="cards">
